@@ -25,7 +25,7 @@ class CourseController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'name'=>'required',
+            'name'=>'required|unique:courses',
             'status'=>'required',
             'short_description'=>'required',
             'category_id'=>'required',
@@ -56,7 +56,7 @@ class CourseController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'name'=>'required',
+            'name'=>'required|unique:courses,name,'.$request->id,
             'status'=>'required',
             'short_description'=>'required',
             'category_id'=>'required',

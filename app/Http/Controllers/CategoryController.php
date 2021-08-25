@@ -27,7 +27,7 @@ class CategoryController extends Controller
     {
 
         $this->validate($request,[
-            'name'=>'required',
+            'name'=>'required|unique:categories',
             'status'=>'required'
         ]);
 
@@ -52,7 +52,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'name'=>'required',
+            'name'=>'required|unique:categories,name,'.$request->id,
             'status'=>'required'
         ]);
 
