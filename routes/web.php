@@ -22,3 +22,7 @@ Route::resource('category', CategoryController::class)->parameter('category','id
 
 //Category Route
 Route::resource('course', CourseController::class)->parameter('course','id');
+
+//Content Route
+Route::resource('content', ContentController::class)->parameter('content','id');
+Route::post('test', 'ContentController@store');

@@ -32,12 +32,21 @@
 
         <li class="nav-item ">
             <a href="{{route('course.index')}}" class="nav-link {{Request::is('course') ? 'active' : ''}}">
-              <i class="fas fa-list"></i>
-              <p>
+            <i class="fas fa-list"></i>
+            <p>
                 Course
-              </p>
+            </p>
             </a>
-          </li>
+        </li>
+
+        <li class="nav-item ">
+            <a href="{{route('content.index')}}" class="nav-link {{Request::is('content') ? 'active' : ''}}">
+            <i class="fas fa-list"></i>
+            <p>
+                Content
+            </p>
+            </a>
+        </li>
 
       </ul>
     </nav>
