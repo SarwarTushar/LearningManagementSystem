@@ -17,9 +17,9 @@ class CreateContentsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->bigInteger('course_id')->unsigned();
-            $table->string('thumbnail');
-            $table->string('video');
-            $table->string('additional');
+            $table->string('thumbnail')->nullable();
+            $table->string('video')->nullable();
+            $table->string('additional')->nullable();
             $table->string('status');
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('restrict')->onUpdate('cascade');
             $table->timestamps();
